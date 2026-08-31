@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="it"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Il Comitato - Annunziata 413</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#001e40",
+                        "primary-container": "#003366",
+                        "on-primary": "#ffffff",
+                        "secondary": "#775a19",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface-variant": "#e4e2de",
+                        "on-surface": "#1b1c1a",
+                        "on-surface-variant": "#43474f",
+                        "pergamena": "#F4EBD0",
+                        "avorio": "#FDFBF7",
+                        "oro": "#C5A059"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap-desktop": "120px",
+                        "grid-gutter": "24px",
+                        "section-gap-mobile": "64px",
+                        "base": "8px",
+                        "grid-margin": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-oro {
+            color: #C5A059;
+        }
+        .text-shadow-ambient {
+            text-shadow: 0px 4px 24px rgba(0, 30, 64, 0.4);
+        }
+        .ambient-shadow { 
+            box-shadow: 0px 12px 32px rgba(0, 51, 102, 0.05); 
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-avorio text-on-surface antialiased overflow-x-hidden">
+
+<!-- Barra di Navigazione Superiore (Desktop) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm hidden xl:flex items-center px-4 lg:px-6 py-4 gap-8 lg:gap-12 transition-all duration-300" id="global-nav-desktop">
+    <div class="h-12 flex-shrink-0">
+        <a href="../index.html">
+            <img alt="Annunziata 413 Logo" class="h-full w-auto object-contain" src="../FotoP/Logo.png">
+        </a>
+    </div>
+    
+    <!-- Menu centrato geometricamente -->
+    <ul class="absolute left-1/2 -translate-x-1/2 flex gap-4 lg:gap-8 font-label-caps text-label-caps whitespace-nowrap">
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Preghiere/code.html">Preghiere e Canti</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Carri Mariani/code.html">I Carri</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Il Fercolo/code.html">Il Fercolo</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../I Cerei/code.html">I Cerei</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Confraternita/code.html">Confraternita</a></li>
+        <li><a class="text-secondary border-b-2 border-secondary pb-1 transition-all" href="../Comitato/code.html">Comitato</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Galleria/code.html">Galleria</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Programma/code.html">Programma</a></li>
+    </ul>
+</nav>
+
+<!-- Intestazione Navigazione Mobile -->
+<header class="xl:hidden flex justify-between items-center px-grid-margin py-4 fixed top-0 w-full z-50 bg-surface/90 backdrop-blur border-b border-outline-variant/30 transition-all duration-300" id="global-nav-mobile">
+<div class="h-10">
+    <a href="../index.html">
+        <img alt="Annunziata 413 Logo" class="h-full w-auto object-contain" src="../FotoP/Logo.png">
+    </a>
+</div>
+<button id="mobile-menu-btn" class="material-symbols-outlined text-primary p-2 focus:outline-none">
+    <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+</header>
+
+<!-- Menu a tendina per Smartphone -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-avorio flex-col pt-[100px] px-8 pb-8 hidden xl:hidden overflow-y-auto">
+    <ul class="flex flex-col gap-6 font-headline-sm text-headline-sm text-center">
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Preghiere/code.html">Preghiere e Canti</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Carri Mariani/code.html">I Carri</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Il Fercolo/code.html">Il Fercolo</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../I Cerei/code.html">I Cerei</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Confraternita/code.html">Confraternita</a></li>
+        <li><a class="text-secondary font-bold transition-all" href="../Comitato/code.html">Comitato</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Galleria/code.html">Galleria</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Programma/code.html">Programma</a></li>
+    </ul>
+</div>
+
+<main class="pt-[80px]">
+<!-- Hero Section con sfondo blu e overlay sfumato -->
+<section class="relative w-full h-[870px] min-h-[600px] flex items-end pb-section-gap-mobile md:pb-section-gap-desktop bg-primary">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <!-- Puoi inserire un'immagine di sfondo qui modificando l'URL -->
+        <div class="w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url(Foto/Sfondo.jpeg);"></div>
+        <!-- Gradient Overlay originale per leggibilità -->
+        <div class="absolute inset-0 bg-gradient-to-t from-avorio via-primary/60 to-transparent"></div>
+    </div>
+    <!-- Hero Content -->
+    <div class="relative z-10 w-full max-w-[1200px] mx-auto px-grid-margin">
+        <span class="block font-label-caps text-label-caps uppercase tracking-widest mb-4 font-bold text-shadow-ambient text-secondary-fixed"></span>
+        <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary text-shadow-ambient max-w-3xl leading-tight">
+            Il Comitato Festeggiamenti
+        </h1>
+        <p class="mt-6 font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+
+        </p>
+    </div>
+</section>
+
+<!-- Sincere Text Section -->
+<section class="max-w-[800px] mx-auto px-grid-margin pt-section-gap-mobile md:pt-section-gap-desktop pb-12 text-center">
+    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        Il Comitato Festeggiamenti Maria Santissima Annunziata nasce e opera con profonda dedizione per dare vita, ogni anno, alla Festa Patronale, in stretta collaborazione con la Parrocchia, le istituzioni, le associazioni e i numerosi volontari. Il suo impegno affonda le radici nel desiderio sincero di custodire una tradizione secolare e di trasmetterla viva e autentica alle nuove generazioni, intrecciando fede, cultura e partecipazione in un unico grande abbraccio comunitario. Dietro ogni edizione della festa si cela il lavoro instancabile di decine di persone che, animate da spirito di servizio e da un profondo amore verso la Patrona, donano tempo, energie e cuore alla preparazione del programma religioso e civile.
+    </p>
+</section>
+
+<!-- Foto del Comitato Section -->
+<section class="max-w-[1000px] mx-auto px-grid-margin pb-section-gap-mobile md:pb-section-gap-desktop">
+    <div class="relative w-full aspect-[16/9] md:aspect-[21/9] p-2 md:p-4 border border-oro/20 bg-avorio ambient-shadow">
+        <!-- Inserire qui la foto di gruppo del Comitato -->
+        <img alt="Foto di gruppo del Comitato Festa" class="w-full h-full object-cover" src="Foto/Fotocomitato.jpeg">
+    </div>
+</section>
+
+<!-- Minimalist Accent Divider con Logo -->
+<div class="flex justify-center items-center pb-12 opacity-60">
+    <div class="w-12 h-px bg-secondary/50"></div>
+    <img src="../FotoP/Logo.png" alt="Logo Annunziata" class="h-8 mx-4 object-contain">
+    <div class="w-12 h-px bg-secondary/50"></div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-section-gap-desktop px-grid-margin flex flex-col md:flex-row justify-between gap-grid-gutter bg-primary border-t border-secondary/20">
+<div class="flex flex-col gap-4">
+<div class="h-20">
+    <a href="../index.html">
+        <img alt="Annunziata 413 Logo" class="h-full w-auto object-contain" src="../FotoP/Logo.png">
+    </a>
+</div>
+<p class="font-body-md text-body-md text-on-primary opacity-80">
+                Festa Maria SS. Annunziata - 413° Edizione
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-6 md:gap-12 font-body-md text-body-md">
+<ul class="flex flex-col gap-2">
+<li class=""><a class="text-on-primary/80 hover:text-secondary-fixed-dim transition-colors duration-300" href="../Contatti/code.html">Contatti</a></li>
+</ul>
+<ul class="flex flex-col gap-2">
+<li class=""><a class="text-on-primary/80 hover:text-secondary-fixed-dim transition-colors duration-300" href="../Ringraziamenti/code.html">Ringraziamenti</a></li>
+</ul>
+</div>
+</footer>
+
+<script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            const iconSpan = mobileBtn.querySelector('span');
+            if(iconSpan) {
+                iconSpan.innerText = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+            }
+        }
+
+        if(mobileBtn) mobileBtn.addEventListener('click', toggleMenu);
+
+        const navDesktop = document.getElementById('global-nav-desktop');
+        const navMobile = document.getElementById('global-nav-mobile');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                if(navDesktop) {
+                    navDesktop.classList.add('shadow-md', 'bg-surface/95');
+                    navDesktop.classList.remove('bg-surface/80');
+                }
+                if(navMobile) {
+                    navMobile.classList.add('shadow-md', 'bg-surface/95');
+                    navMobile.classList.remove('bg-surface/80');
+                }
+            } else {
+                if(navDesktop) {
+                    navDesktop.classList.remove('shadow-md', 'bg-surface/95');
+                    navDesktop.classList.add('bg-surface/80');
+                }
+                if(navMobile) {
+                    navMobile.classList.remove('shadow-md', 'bg-surface/95');
+                    navMobile.classList.add('bg-surface/80');
+                }
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html><html lang="it"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Preghiere e Canti - Annunziata 413</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#001e40", 
+                      "primary-container": "#003366",
+                      "on-primary": "#ffffff",
+                      "secondary": "#775a19", 
+                      "secondary-fixed-dim": "#e9c176", 
+                      "surface-variant": "#e4e2de",
+                      "on-surface": "#1b1c1a",
+                      "on-surface-variant": "#43474f",
+                      "pergamena": "#F4EBD0", 
+                      "avorio": "#FDFBF7", 
+                      "oro": "#C5A059" 
+              },
+              "spacing": {
+                      "section-gap-desktop": "120px",
+                      "grid-gutter": "24px",
+                      "section-gap-mobile": "64px",
+                      "grid-margin": "24px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "label-caps": ["Inter"],
+                      "headline-sm": ["Playfair Display"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Playfair Display"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        :root {
+            --prayer-size: 1.125rem;
+            --prayer-line: 1.7;
+        }
+        body { background-color: theme('colors.avorio'); }
+        .divider-oro { border-top: 1px solid theme('colors.oro'); width: 60px; margin: 2rem auto; }
+        
+        .prayer-text-container, 
+        .prayer-text-container p, 
+        .prayer-text-container li {
+            font-size: var(--prayer-size) !important;
+            line-height: var(--prayer-line) !important;
+            transition: font-size 0.3s ease, line-height 0.3s ease;
+        }
+        .prayer-text-container h3 {
+            font-size: calc(var(--prayer-size) * 1.2) !important;
+            line-height: 1.4 !important;
+            transition: font-size 0.3s ease;
+        }
+
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .prayer-content { transition: max-height 0.3s ease-out, opacity 0.2s ease-in; overflow: hidden; }
+        .prayer-content.collapsed { max-height: 0; opacity: 0; pointer-events: none; }
+        .accordion-header .arrow { transition: transform 0.3s ease; }
+    </style>
+</head>
+<body class="antialiased text-on-surface overflow-x-hidden">
+
+<!-- Barra di Navigazione Superiore (Desktop) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm hidden xl:flex items-center px-4 lg:px-6 py-4 gap-8 lg:gap-12 transition-all duration-300" id="global-nav-desktop">
+    <div class="h-12 flex-shrink-0">
+        <a href="../Home/code.html">
+            <img alt="Annunziata 413 Logo" class="h-full w-auto object-contain" src="../FotoP/Logo.png">
+        </a>
+    </div>
+    
+    <!-- Menu centrato -->
+    <ul class="absolute left-1/2 -translate-x-1/2 flex gap-4 lg:gap-8 font-label-caps text-label-caps whitespace-nowrap">
+        <li><a class="text-secondary border-b-2 border-secondary pb-1 transition-all" href="../Preghiere/code.html">Preghiere e Canti</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Carri Mariani/code.html">I Carri</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Il Fercolo/code.html">Il Fercolo</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../I Cerei/code.html">I Cerei</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Confraternita/code.html">Confraternita</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Comitato/code.html">Comitato</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Galleria/code.html">Galleria</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Programma/code.html">Programma</a></li>
+    </ul>
+</nav>
+
+<!-- Intestazione Navigazione Mobile -->
+<header class="xl:hidden flex justify-between items-center px-grid-margin py-4 fixed top-0 w-full z-50 bg-surface/90 backdrop-blur border-b border-outline-variant/30 transition-all duration-300" id="global-nav-mobile">
+<div class="h-10">
+    <a href="../Home/code.html">
+        <img alt="Annunziata 413 Logo" class="h-full w-auto object-contain" src="../FotoP/Logo.png">
+    </a>
+</div>
+<button id="mobile-menu-btn" class="material-symbols-outlined text-primary p-2 focus:outline-none">
+    <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+</header>
+
+<!-- Menu a tendina per Smartphone -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-avorio flex-col pt-[100px] px-8 pb-8 hidden xl:hidden overflow-y-auto">
+    <ul class="flex flex-col gap-6 font-headline-sm text-headline-sm text-center">
+        <li><a class="text-secondary font-bold transition-all" href="../Preghiere/code.html">Preghiere e Canti</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Carri Mariani/code.html">I Carri</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Il Fercolo/code.html">Il Fercolo</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../I Cerei/code.html">I Cerei</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Confraternita/code.html">Confraternita</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Comitato/code.html">Comitato</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Galleria/code.html">Galleria</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Programma/code.html">Programma</a></li>
+    </ul>
+</div>
+
+<main class="pt-[80px]">
+
+<!-- Hero Section allineata alla Home (Sfondo blu scuro) -->
+<section class="relative w-full h-[614px] md:h-[819px] flex items-end">
+    <div class="absolute inset-0 overflow-hidden bg-primary-container">
+        <img class="w-full h-full object-cover" src="Foto/Sfondo.jpg" alt="Sfondo Preghiere">
+    </div>
+    <!-- Sfumatura scura per rendere il testo leggibile sulla foto -->
+    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+    <div class="relative z-10 w-full max-w-[1200px] mx-auto px-grid-margin pb-16 text-left">
+        <span class="font-label-caps text-label-caps text-oro uppercase tracking-widest block mb-4">La Devozione</span>
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-4 text-balance">
+            Preghiere e Canti
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-primary drop-shadow-md max-w-2xl text-balance">
+            Le parole e le melodie che da secoli accompagnano la comunità di Pedara nell'omaggio filiale a Maria SS. Annunziata, raccogliendo la fede di generazioni passate e presenti.
+        </p>
+    </div>
+</section>
+
+<!-- Content Section -->
+<div class="max-w-[900px] mx-auto px-grid-margin py-section-gap-mobile md:py-section-gap-desktop">
+
+    <!-- Selettore Dimensione Testo Sticky -->
+    <div class="sticky top-[80px] md:top-[90px] z-40 flex justify-center mb-12">
+        <div class="bg-avorio/95 backdrop-blur-md border border-oro/30 rounded-full px-6 py-2 flex items-center gap-6 shadow-[0px_8px_24px_rgba(0,30,64,0.1)]">
+            <span class="text-label-caps text-primary font-bold hidden sm:block tracking-widest">DIMENSIONE TESTO</span>
+            <div class="flex gap-2">
+                <button onclick="changeFontSize(1, this)" class="font-btn text-primary w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors text-sm font-bold">A-</button>
+                <button onclick="changeFontSize(2, this)" class="font-btn bg-primary text-on-primary w-10 h-10 rounded-full border border-primary flex items-center justify-center transition-colors text-base font-bold shadow-inner">A</button>
+                <button onclick="changeFontSize(3, this)" class="font-btn text-primary w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 transition-colors text-lg font-bold">A+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. Atto di affidamento alla Madonna (Espandibile) -->
+    <section class="mb-6 bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 md:px-8 bg-surface-container-low text-primary hover:bg-surface-variant transition-colors focus:outline-none group" onclick="toggleAccordion(this)">
+            <h2 class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-left">Atto di affidamento alla Madonna</h2>
+            <span class="material-symbols-outlined arrow text-oro transition-transform duration-300 group-hover:scale-110">expand_more</span>
+        </button>
+        <div class="accordion-content overflow-hidden transition-[max-height] duration-300 ease-in-out" style="max-height: 0px;">
+            <div class="p-6 md:p-10 bg-pergamena text-center">
+                <div class="prayer-text-container italic text-on-surface max-w-[700px] mx-auto space-y-6 text-left md:text-center">
+                    <p>[INSERIRE QUI IL TESTO DELL'ATTO DI AFFIDAMENTO]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Coroncina (Espandibile) -->
+    <section class="mb-6 bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 md:px-8 bg-surface-container-low text-primary hover:bg-surface-variant transition-colors focus:outline-none group" onclick="toggleAccordion(this)">
+            <h2 class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-left">Coroncina</h2>
+            <span class="material-symbols-outlined arrow text-oro transition-transform duration-300 group-hover:scale-110">expand_more</span>
+        </button>
+        <div class="accordion-content overflow-hidden transition-[max-height] duration-300 ease-in-out" style="max-height: 0px;">
+            <div class="p-6 md:p-10 text-center">
+                <div class="prayer-text-container space-y-6 max-w-[700px] mx-auto italic text-on-surface-variant">
+                    <p><strong>V.</strong> Nel Nome del Padre, del Figlio e dello Spirito Santo.<br><strong>R.</strong> Amen.</p>
+                    <p><strong>V.</strong> O Dio Vieni a salvarmi.<br><strong>R.</strong> Signore, vieni presto in mio aiuto.</p>
+                    <p><strong>V.</strong> Gloria al Padre al Figlio ed allo Spirito Santo<br><strong>R.</strong> Come era nel Principio Ora e Sempre nei secoli dei secoli. Amen.</p>
+                    
+                    <div class="py-4 space-y-6 text-on-surface">
+                        <p>1. Santissima Annunziata<br>Maria nostra Avvocata<br>per te nostre preghiere in tutte l'ore<br>fa che accetti Gesù nostro Signore.<br><strong>Ave o Maria, Gloria.</strong></p>
+                        <p>2. Santissima Annunziata<br>Maria nostra Avvocata<br>hai tanto pietoso il cuore<br>che non sdegni il peccatore.<br><strong>Ave o Maria, Gloria.</strong></p>
+                        <p>3. Santissima Annunziata<br>Maria nostra Avvocata<br>libera noi devoti<br>d'ogni male e terremoti.<br><strong>Ave o Maria, Gloria.</strong></p>
+                        <p>4. Santissima Annunziata<br>Maria nostra Avvocata<br>per la tua clemenza e carità<br>consola noi in necessità.<br><strong>Ave o Maria, Gloria.</strong></p>
+                        <p>5. Santissima Annunziata<br>Maria nostra Avvocata<br>fà che Cristo da te nato<br>ci preservi dal peccato.<br><strong>Ave o Maria, Gloria.</strong></p>
+                        <p>6. Santissima Annunziata<br>Maria nostra Avvocata<br>fà che Gesù per sua grazia<br>l'alma ognor ci renda sazia.<br><strong>Ave o Maria, Gloria.</strong></p>
+                        <p>7. Santissima Annunziata<br>Maria nostra Avvocata<br>fa che sia la nostra sorte<br>far felice e santa morte.<br><strong>Ave o Maria, Gloria.</strong></p>
+                        <p>8. Santissima Annunziata<br>Maria nostra Avvocata<br>Madre sei del verbo eterno<br>facci fuori dall'inferno.<br><strong>Ave o Maria, Gloria.</strong></p>
+                        <p>9. Santissima Annunziata<br>Maria nostra Avvocata<br>facci degni del tuo viso<br>e goderti in Paradiso.<br><strong>Ave o Maria, Gloria.</strong></p>
+                    </div>
+
+                    <div class="border-t border-oro/30 pt-8 mt-8 text-left text-on-surface">
+                        <h3 class="font-bold text-primary mb-4 text-center not-italic uppercase tracking-widest">OFFERTA (in piedi)</h3>
+                        <p>O Maria Vergine Santissima Madre di Dio, Regina del cielo e della terra, Avvocata Dei peccatori e rifugio dei tribolati, noi, benché indegnissimi di essere vostri servi, mossi nondimeno dal desiderio di servirvi, e confidando nella vostra bontà, vi scegliamo oggi, in presenza dell'Angelo nostro e di tutta la corte del Cielo, per nostra particolare Signora Avvocata e Madre e fermamente poniamo di volervi sempre servire e fare quanto si può affinché siate dagli altri servita.</p>
+                        <p class="mt-4">Ti supplichiamo, dunque, Madre pietosissima, per il sangue del vostro figlio Gesù Cristo sparso per noi, che ci riceviate nel numero degli altri vostri devoti perché vostri perpetui servi. Favoriteci in tutte le nostre azioni ed impetrateci Grazia dal figlio vostro Gesù che talmente ci Portiamo in tutti i nostri pensieri, parole ed opere Che noi non abbiamo ad offendere gli occhi vostri e del vostro Santissimo Figlio e ricordatevi di noi ora e nell'ora della nostra morte, affinché l'anima nostra non si parta da questo miserabile corpo senza la vera e finale penitenza delle proprie colpe. Così sia.</p>
+                        
+                        <p class="mt-8 not-italic"><strong>V.</strong> Prega per noi Santa Madre di Dio.<br><strong>R.</strong> Affinché siamo fatti degni delle Promesse di Cristo.</p>
+                        <p class="mt-4 not-italic"><strong>V.</strong> Preghiamo. O Padre, Tu hai voluto che il Tuo Verbo si facesse uomo nel grembo della Vergine Maria: concedi a noi, che adoriamo il mistero del redentore, vero Dio e Vero Uomo, di essere partecipi della Sua vita immortale. Per il Nostro Signore Gesù Cristo, Tuo Figlio che è Dio…<br><strong>R.</strong> Amen.</p>
+                        <p class="mt-4 not-italic"><strong>V.</strong> Il Signore ci benedica, ci preservi da ogni male e ci conduca alla vita eterna.<br><strong>R.</strong> Amen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Santo Rosario (Espandibile) -->
+    <section class="mb-6 bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 md:px-8 bg-surface-container-low text-primary hover:bg-surface-variant transition-colors focus:outline-none group" onclick="toggleAccordion(this)">
+            <h2 class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-left">Santo Rosario</h2>
+            <span class="material-symbols-outlined arrow text-oro transition-transform duration-300 group-hover:scale-110">expand_more</span>
+        </button>
+        <div class="accordion-content overflow-hidden transition-[max-height] duration-300 ease-in-out" style="max-height: 0px;">
+            <div class="p-6 md:p-10">
+                <div class="prayer-text-container grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 text-left max-w-[800px] mx-auto">
+                    <div>
+                        <h3 class="text-primary font-bold mb-4 border-b border-oro/30 pb-2">Misteri gaudiosi (o della gioia) <br><span class="text-sm font-normal text-on-surface-variant">(lunedì e sabato)</span></h3>
+                        <ol class="list-decimal list-inside space-y-3 text-on-surface">
+                            <li>Annunciazione dell'Angelo a Maria.</li>
+                            <li>Visita di Maria a S. Elisabetta.</li>
+                            <li>Gesù nasce a Betlemme.</li>
+                            <li>Presentazione di Gesù al Tempio.</li>
+                            <li>Ritrovamento di Gesù nel Tempio.</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3 class="text-primary font-bold mb-4 border-b border-oro/30 pb-2">Misteri dolorosi (o del dolore) <br><span class="text-sm font-normal text-on-surface-variant">(martedì e venerdì)</span></h3>
+                        <ol class="list-decimal list-inside space-y-3 text-on-surface">
+                            <li>L'agonia di Gesù nell'orto degli ulivi</li>
+                            <li>La flagellazione di Gesù alla colonna</li>
+                            <li>L'incoronazione di spine</li>
+                            <li>Gesù è caricato della Croce</li>
+                            <li>La crocifissione e la morte di Gesù</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3 class="text-primary font-bold mb-4 border-b border-oro/30 pb-2">Misteri gloriosi (o della gloria) <br><span class="text-sm font-normal text-on-surface-variant">(mercoledì e la domenica)</span></h3>
+                        <ol class="list-decimal list-inside space-y-3 text-on-surface">
+                            <li>La resurrezione di Gesù</li>
+                            <li>L'ascensione di Gesù al Cielo</li>
+                            <li>La discesa dello Spirito Santo nel Cenacolo</li>
+                            <li>L'assunzione di Maria Vergine al Cielo</li>
+                            <li>L'incoronazione di Maria Vergine</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3 class="text-primary font-bold mb-4 border-b border-oro/30 pb-2">Misteri luminosi (o della luce) <br><span class="text-sm font-normal text-on-surface-variant">(giovedì)</span></h3>
+                        <ol class="list-decimal list-inside space-y-3 text-on-surface">
+                            <li>Il battesimo di Gesù nel fiume Giordano</li>
+                            <li>Le nozze di Cana</li>
+                            <li>L'annuncio del Regno di Dio</li>
+                            <li>La trasfigurazione di Gesù sul monte Tabor</li>
+                            <li>L'istituzione dell'Eucaristia</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Litanie Lauretane (Espandibile) -->
+    <section class="mb-6 bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 md:px-8 bg-surface-container-low text-primary hover:bg-surface-variant transition-colors focus:outline-none group" onclick="toggleAccordion(this)">
+            <h2 class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-left">Litanie Lauretane</h2>
+            <span class="material-symbols-outlined arrow text-oro transition-transform duration-300 group-hover:scale-110">expand_more</span>
+        </button>
+        <div class="accordion-content overflow-hidden transition-[max-height] duration-300 ease-in-out" style="max-height: 0px;">
+            <div class="p-6 md:p-10">
+                <div class="prayer-text-container grid grid-cols-2 gap-4 text-left max-w-[700px] mx-auto text-on-surface">
+                    
+                    <div class="space-y-2">
+                        <p class="font-bold text-primary border-b border-oro/30 pb-2">Latino</p>
+                        <p>Kyrie, eleison</p><p>Christe, eleison</p><p>Kyrie, eleison</p>
+                        <p class="mt-4">Sancta Maria, Ora pro nobis</p>
+                        <p>Sancta Dei Genetrix</p>
+                        <p>Sancta Virgo virginum</p>
+                        <p>Mater Christi</p>
+                        <p>Mater Ecclesiae</p>
+                        <p>Mater divinae gratiae</p>
+                        <p>Mater purissima</p>
+                        <p>Mater castissima</p>
+                        <p>Mater inviolata</p>
+                        <p>Mater intemerata</p>
+                        <p>Mater amabilis</p>
+                        <p>Mater admirabilis</p>
+                        <p>Mater boni consilii</p>
+                        <p>Mater Creatoris</p>
+                        <p>Mater Salvatoris</p>
+                        <p>Virgo prudentissima</p>
+                        <p>Virgo veneranda</p>
+                        <p>Virgo praedicanda</p>
+                        <p>Virgo potens</p>
+                        <p>Virgo clemens</p>
+                        <p>Virgo fidelis</p>
+                        <p>Speculum iustitiae</p>
+                        <p>Sedes Sapientiae</p>
+                        <p>Causa nostrae laetitiae</p>
+                        <p>Vas spirituale</p>
+                        <p>Vas honorabile</p>
+                        <p>Vas insigne devotionis</p>
+                        <p>Rosa mystica</p>
+                        <p>Turris davidica</p>
+                        <p>Turris eburnea</p>
+                        <p>Domus aurea</p>
+                        <p>Foederis arca</p>
+                        <p>Janua caeli</p>
+                        <p>Stella matutina</p>
+                        <p>Salus infirmorum</p>
+                        <p>Refugium peccatorum</p>
+                        <p>Consolatrix afflictorum</p>
+                        <p>Auxilium christianorum</p>
+                        <p>Regina angelorum</p>
+                        <p>Regina patriarcharum</p>
+                        <p>Regina prophetarum</p>
+                        <p>Regina Apostolorum</p>
+                        <p>Regina martyrum</p>
+                        <p>Regina confessorum</p>
+                        <p>Regina virginum</p>
+                        <p>Regina sanctorum omnium</p>
+                        <p>Regina sine labe originali concepta</p>
+                        <p>Regina in caelum assumpta</p>
+                        <p>Regina sacratissimi rosarii</p>
+                        <p>Regina Pacis</p>
+                        <p class="mt-4">Agnus Dei, qui tollis peccata mundi:</p>
+                        <p>parce nobis, Domine</p>
+                        <p>exaudi nos, Domine</p>
+                        <p>miserere nobis</p>
+                    </div>
+                    
+                    <div class="space-y-2 italic text-on-surface-variant">
+                        <p class="font-bold text-primary border-b border-oro/30 pb-2 not-italic">Italiano</p>
+                        <p>Signore, pietà</p><p>Cristo, pietà</p><p>Signore, pietà</p>
+                        <p class="mt-4">Santa Maria, Prega per noi</p>
+                        <p>Santa Madre di Dio</p>
+                        <p>Santa Vergine delle vergini</p>
+                        <p>Madre di Cristo</p>
+                        <p>Madre della Chiesa</p>
+                        <p>Madre della divina grazia</p>
+                        <p>Madre purissima</p>
+                        <p>Madre castissima</p>
+                        <p>Madre sempre vergine</p>
+                        <p>Madre immacolata</p>
+                        <p>Madre degna d'amore</p>
+                        <p>Madre ammirabile</p>
+                        <p>Madre del buon consiglio</p>
+                        <p>Madre del Creatore</p>
+                        <p>Madre del Salvatore</p>
+                        <p>Vergine prudente</p>
+                        <p>Vergine degna di onore</p>
+                        <p>Vergine degna di lode</p>
+                        <p>Vergine potente</p>
+                        <p>Vergine clemente</p>
+                        <p>Vergine fedele</p>
+                        <p>Specchio di perfezione</p>
+                        <p>Sede della Sapienza</p>
+                        <p>Fonte della nostra gioia</p>
+                        <p>Tempio dello Spirito Santo</p>
+                        <p>Dimora dell'eterna gloria</p>
+                        <p>Dimora consacrata a Dio</p>
+                        <p>Rosa mistica</p>
+                        <p>Torre della santa città di Davide</p>
+                        <p>Fortezza inespugnabile</p>
+                        <p>Santuario della divina presenza</p>
+                        <p>Arca dell'alleanza</p>
+                        <p>Porta del cielo</p>
+                        <p>Stella del Mattino</p>
+                        <p>Salute degli infermi</p>
+                        <p>Rifugio dei peccatori</p>
+                        <p>Consolatrice degli afflitti</p>
+                        <p>Aiuto dei cristiani</p>
+                        <p>Regina degli angeli</p>
+                        <p>Regina dei patriarchi</p>
+                        <p>Regina dei profeti</p>
+                        <p>Regina degli Apostoli</p>
+                        <p>Regina dei martiri</p>
+                        <p>Regina dei confessori della fede</p>
+                        <p>Regina delle vergini</p>
+                        <p>Regina di tutti i santi</p>
+                        <p>Regina concepita senza peccato</p>
+                        <p>Regina assunta in cielo</p>
+                        <p>Regina del Santo rosario</p>
+                        <p>Regina della Pace</p>
+                        <p class="mt-4"><br></p>
+                        <p>perdonaci, Signore</p>
+                        <p>ascoltaci, Signore</p>
+                        <p>abbi pietà di noi</p>
+                    </div>
+                </div>
+                
+                <div class="prayer-text-container border-t border-oro/30 pt-6 mt-6 max-w-[700px] mx-auto text-on-surface">
+                    <p><strong>V.</strong> Prega per noi Santa Madre di Dio<br>
+                    <strong>R.</strong> Affinché siamo fatti degni delle promesse di Cristo.</p>
+                    <p class="mt-4"><strong>V.</strong> Preghiamo. O Dio, il tuo unico Figlio ci ha procurato i beni della salvezza eterna con la sua vita, morte e risurrezione: a noi che, con il santissimo rosario della Beata Vergine Maria, abbiamo meditato questi misteri, concedi di imitare ciò che essi contengono e di raggiungere ciò che essi promettono. Per Cristo nostro Signore.<br>
+                    <strong>R.</strong> Amen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Angelus (Espandibile) -->
+    <section class="mb-6 bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 md:px-8 bg-surface-container-low text-primary hover:bg-surface-variant transition-colors focus:outline-none group" onclick="toggleAccordion(this)">
+            <h2 class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-left">Angelus</h2>
+            <span class="material-symbols-outlined arrow text-oro transition-transform duration-300 group-hover:scale-110">expand_more</span>
+        </button>
+        <div class="accordion-content overflow-hidden transition-[max-height] duration-300 ease-in-out" style="max-height: 0px;">
+            <div class="p-6 md:p-10 text-center">
+                <div class="prayer-text-container space-y-6 max-w-[600px] mx-auto text-on-surface">
+                    <p><strong>V.</strong> L'angelo del Signore portò l'annuncio a Maria,<br>
+                    <strong>R.</strong> ed Ella concepì per opera dello Spirito Santo.</p>
+                    <p class="italic text-on-surface-variant">Ave, o Maria.</p>
+                    
+                    <p><strong>V.</strong> "Ecco sono la serva del Signore."<br>
+                    <strong>R.</strong> "Avvenga in me secondo la tua parola."</p>
+                    <p class="italic text-on-surface-variant">Ave, o Maria.</p>
+                    
+                    <p><strong>V.</strong> E il verbo si fece carne.<br>
+                    <strong>R.</strong> E venne ad abitare in mezzo a noi.</p>
+                    <p class="italic text-on-surface-variant">Ave, o Maria.</p>
+                    
+                    <p><strong>V.</strong> Prega per noi santa madre di Dio.<br>
+                    <strong>R.</strong> Affinché siamo fatti degni delle promesse di Cristo.</p>
+                    
+                    <div class="border-t border-oro/30 pt-6 mt-6">
+                        <p><strong>V. Preghiamo:</strong> Infondi nel nostro spirito la tua grazia, o Padre, tu che, all'annuncio dell'Angelo, ci hai rivelato l'incarnazione del tuo Figlio, per la sua passione e la sua croce guidaci alla gloria della risurrezione. Per Cristo nostro Signore.<br><strong>R.</strong> Amen.</p>
+                        <p class="italic text-on-surface-variant mt-4">Gloria al Padre (3v.)</p>
+                        <p class="italic text-on-surface-variant">L'eterno riposo...</p>
+                        <p class="italic text-on-surface-variant">Angelo di Dio...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Canti Mariani (Espandibile) -->
+    <section class="mb-6 bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 md:px-8 bg-surface-container-low text-primary hover:bg-surface-variant transition-colors focus:outline-none group" onclick="toggleAccordion(this)">
+            <h2 class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-left">Canti Mariani</h2>
+            <span class="material-symbols-outlined arrow text-oro transition-transform duration-300 group-hover:scale-110">expand_more</span>
+        </button>
+        <div class="accordion-content overflow-hidden transition-[max-height] duration-300 ease-in-out" style="max-height: 0px;">
+            <div class="p-6 md:p-10 bg-surface">
+                <div class="prayer-text-container grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-[800px] mx-auto">
+                    
+                    <div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-sm">
+                        <h3 class="text-primary font-bold mb-4 uppercase tracking-wider">MIRA IL TUO POPOLO</h3>
+                        <div class="italic text-on-surface-variant space-y-4">
+                            <p>Mira il tuo popolo, o bella Signora,<br>che pien di giubilo oggi t'onora.</p>
+                            <p>Anch'io festevole corro a' tuoi piè:<br>o Santa Vergine, prega per me!</p>
+                            <p>Il pietosissimo tuo dolce cuore<br>e' pio rifugio al peccatore.</p>
+                            <p>tesori e grazie racchiude in sé;<br>o Santa Vergine, prega per me!</p>
+                            <p>In questa misera valle infelice<br>tutti t'invocano soccorritrice.</p>
+                            <p>Questo bel titolo conviene a te;<br>o Santa Vergine, prega per me!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-sm">
+                        <h3 class="text-primary font-bold mb-4 uppercase tracking-wider">ANDRÒ A VEDERLA UN DÌ</h3>
+                        <div class="italic text-on-surface-variant space-y-4">
+                            <p>Andrò a vederla un dì,<br>in cielo patria mia,<br>andrò a veder Maria,<br>mia gioia e mio amor.</p>
+                            <p class="font-semibold text-primary not-italic">Rit. Al cielo, al cielo, al ciel!<br>Andrò a vederla un dì. (bis)</p>
+                            <p>Andrò a vederla un dì,<br>il grido di speranza,<br>che infondemi costanza<br>nel viaggio e fra i dolor.</p>
+                            <p class="font-semibold text-primary not-italic">Rit. Al cielo, al cielo, al ciel!<br>Andrò a vederla un dì. (bis)</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-sm">
+                        <h3 class="text-primary font-bold mb-4 uppercase tracking-wider">NOME DOLCISSIMO</h3>
+                        <div class="italic text-on-surface-variant space-y-4">
+                            <p>Nome dolcissimo, nome d'amore,<br>tu dei rifugio al peccatore:<br>fra i cori angelici e l'armonia<br>Ave Maria, Ave Maria. (2 volte)</p>
+                            <p>Del Tuo popolo tu sei l'onore<br>poiché sei Madre del Salvatore<br>tra i cori angelici e l'armonia<br>Ave Maria, Ave Maria. (2 volte)</p>
+                            <p>Soave al cuore è il tuo sorriso,<br>o Santa Vergine, del Paradiso:<br>la terra e il cielo a te s'inchina<br>Ave Maria, Ave Maria. (2 volte)</p>
+                            <p>Dal Ciel benigna, riguarda a noi,<br>materna mostrati ai figli tuoi,<br>ascolta, o Vergine, la prece pia<br>Ave Maria, Ave Maria. (2 volte)</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-sm">
+                        <h3 class="text-primary font-bold mb-4 uppercase tracking-wider">VOGLIO CHIAMAR MARIA</h3>
+                        <div class="italic text-on-surface-variant space-y-4">
+                            <p>Voglio chiamar Maria<br>Se spunta in ciel l'aurora,<br>Voglio chiamarla ognora<br>Quando tramonta il dì.</p>
+                            <p>Dolcissima Maria,<br>La madre mia Tu sei,<br>Perciò su i labbri miei<br>Sempre il tuo nome avrò.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-sm md:col-span-2 lg:col-span-1">
+                        <h3 class="text-primary font-bold mb-4 uppercase tracking-wider">DELL' AURORA TU SORGI PIÙ BELLA</h3>
+                        <div class="italic text-on-surface-variant space-y-4">
+                            <p>Dall'aurora Tu sorgi più bella,<br>coi tuoi raggi fai lieta la terra,<br>e fra gli astri che il cielo rinserra,<br>non v'è stella più bella di Te.</p>
+                            <p class="font-semibold text-primary not-italic">Rit. Bella tu sei qual sole,<br>bianca più della luna;<br>e le stelle più belle<br>non son belle al par di Te. (bis)</p>
+                            <p>T'incorono dodici stelle,<br>ai tuoi piedi hai l'ali del vento,<br>e la luna si curva d'argento;<br>il tuo manto ha il colore del ciel. (Rit.)</p>
+                            <p>Gli occhi tuoi son più belli del mare,<br>la tua fronte ha il colore del giglio,<br>le tue gote baciate dal Figlio<br>son due rose e le labbra son fior. (Rit.)</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/20 shadow-sm md:col-span-2 lg:col-span-1">
+                        <h3 class="text-primary font-bold mb-4 uppercase tracking-wider">O BELLA MIA SPERANZA</h3>
+                        <div class="italic text-on-surface-variant space-y-4">
+                            <p>O bella mia speranza, dolcissima Maria<br>Tu sei la vita mia, la pace mia sei tu.<br>Tu sei la vita mia, la pace mia sei tu.</p>
+                            <p class="font-semibold text-primary not-italic">RIT. EVVIVA Maria, Maria sempre viva<br>EVVIVA Maria e chi la creò<br>e senza Maria, salvari non si può.</p>
+                            <p>In questo mar del mondo, tu sei l'amica stella,<br>Tu sei la navicella, dell'alma mia sei tu.<br>Tu sei la navicella, dell'alma mia sei tu.</p>
+                            <p class="font-semibold text-primary not-italic">RIT. EVVIVA Maria, Maria sempre viva...</p>
+                            <p>O Vergine bella, o Vergine cara,<br>proteggi PEDARA, che sempre ti amò.<br>proteggi PEDARA, che sempre ti amò.</p>
+                            <p class="font-semibold text-primary not-italic">RIT. EVVIVA Maria, Maria sempre viva...</p>
+                            <p>Maria ti salutiamo, Regina Gloriosa,<br>Maria Madre amorosa, sei piena di bontà.<br>Maria Madre amorosa, sei piena di bontà.</p>
+                            <p class="font-semibold text-primary not-italic">RIT. EVVIVA Maria, Maria sempre viva...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. La Cantata (Video) -->
+    <section class="mb-12 bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+        <button class="w-full flex justify-between items-center p-6 md:px-8 bg-surface-container-low text-primary hover:bg-surface-variant transition-colors focus:outline-none group" onclick="toggleAccordion(this)">
+            <h2 class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-left">La Cantata</h2>
+            <span class="material-symbols-outlined arrow text-oro transition-transform duration-300 group-hover:scale-110">expand_more</span>
+        </button>
+        <div class="accordion-content overflow-hidden transition-[max-height] duration-300 ease-in-out" style="max-height: 0px;">
+            <div class="p-6 md:p-10 bg-surface">
+                <div class="max-w-[800px] mx-auto aspect-video rounded-xl overflow-hidden shadow-lg border border-outline-variant/20">
+                    
+                    <a href="https://www.youtube.com/watch?v=F9fGRnCDj4w" target="_blank" class="block relative w-full h-full group cursor-pointer">
+                        <!-- Immagine di anteprima automatica da YouTube -->
+                        <img src="https://img.youtube.com/vi/F9fGRnCDj4w/hqdefault.jpg" alt="Guarda La Cantata su YouTube" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        
+                        <!-- Sfondo scuro e icona Play -->
+                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center transition-colors duration-300 group-hover:bg-black/20">
+                            <svg class="w-16 h-16 text-white drop-shadow-md mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            <span class="text-white font-bold tracking-widest uppercase text-sm drop-shadow-md">Guarda su YouTube</span>
+                        </div>
+                    </a>
+                    
+                </div>
+                <p class="text-center text-on-surface-variant mt-4 font-body-md italic text-sm">
+                    (Clicca per aprire il video su YouTube)
+                </p>
+            </div>
+        </div>
+    </section>
+
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-section-gap-desktop px-grid-margin flex flex-col md:flex-row justify-between gap-grid-gutter bg-primary border-t border-secondary/20">
+<div class="flex flex-col gap-4">
+<div class="h-20">
+    <a href="../Home/code.html">
+        <img alt="Annunziata 413 Logo" class="h-full w-auto object-contain" src="../FotoP/Logo.png">
+    </a>
+</div>
+<p class="font-body-md text-body-md text-on-primary opacity-80">
+                Festa Maria SS. Annunziata - 413° Edizione
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-6 md:gap-12 font-body-md text-body-md">
+<ul class="flex flex-col gap-2">
+<li class=""><a class="text-on-primary/80 hover:text-secondary-fixed-dim transition-colors duration-300" href="../Contatti/code.html">Contatti</a></li>
+</ul>
+<ul class="flex flex-col gap-2">
+<li class=""><a class="text-on-primary/80 hover:text-secondary-fixed-dim transition-colors duration-300" href="../Ringraziamenti/code.html">Ringraziamenti</a></li>
+</ul>
+</div>
+</footer>
+
+<script>
+    // --- Gestione Menu Mobile ---
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        const iconSpan = mobileBtn.querySelector('span');
+        if(iconSpan) {
+            iconSpan.innerText = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+        }
+    }
+    if(mobileBtn) mobileBtn.addEventListener('click', toggleMenu);
+
+
+    // --- Logica Accordion Espandibili fluida ---
+    function toggleAccordion(button) {
+        const content = button.nextElementSibling;
+        const arrow = button.querySelector('.arrow');
+        
+        if (content.classList.contains('is-open')) {
+            // Chiusura
+            content.style.maxHeight = content.scrollHeight + 'px';
+            void content.offsetHeight; 
+            content.style.maxHeight = '0px';
+            arrow.style.transform = 'rotate(0deg)';
+            content.classList.remove('is-open');
+        } else {
+            // Apertura
+            content.style.maxHeight = content.scrollHeight + 'px';
+            arrow.style.transform = 'rotate(180deg)';
+            content.classList.add('is-open');
+            
+            // Dopo l'animazione, rimuovo il limite per il resize dinamico
+            setTimeout(() => {
+                if(content.classList.contains('is-open')) {
+                    content.style.maxHeight = 'none';
+                }
+            }, 300);
+        }
+    }
+
+
+    // --- Logica Selettore Dimensione Testo ---
+    function changeFontSize(level, btnElement) {
+        document.querySelectorAll('.font-btn').forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'shadow-inner');
+            b.classList.add('text-primary');
+        });
+        btnElement.classList.remove('text-primary');
+        btnElement.classList.add('bg-primary', 'text-on-primary', 'shadow-inner');
+
+        const root = document.documentElement;
+        if (level === 1) {
+            root.style.setProperty('--prayer-size', '1rem');
+            root.style.setProperty('--prayer-line', '1.6');
+        } else if (level === 2) {
+            root.style.setProperty('--prayer-size', '1.125rem');
+            root.style.setProperty('--prayer-line', '1.7');
+        } else if (level === 3) {
+            root.style.setProperty('--prayer-size', '1.35rem');
+            root.style.setProperty('--prayer-line', '1.9');
+        }
+    }
+
+
+    // --- Barra di navigazione sticky ---
+    const navDesktop = document.getElementById('global-nav-desktop');
+    const navMobile = document.getElementById('global-nav-mobile');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            if(navDesktop) {
+                navDesktop.classList.add('shadow-md', 'bg-surface/95');
+                navDesktop.classList.remove('bg-surface/80');
+            }
+            if(navMobile) {
+                navMobile.classList.add('shadow-md', 'bg-surface/95');
+                navMobile.classList.remove('bg-surface/80');
+            }
+        } else {
+            if(navDesktop) {
+                navDesktop.classList.remove('shadow-md', 'bg-surface/95');
+                navDesktop.classList.add('bg-surface/80');
+            }
+            if(navMobile) {
+                navMobile.classList.remove('shadow-md', 'bg-surface/95');
+                navMobile.classList.add('bg-surface/80');
+            }
+        }
+    });
+</script>
+</body></html>
