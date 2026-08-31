@@ -1,0 +1,543 @@
+<!DOCTYPE html><html lang="it" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Programma Festeggiamenti 2026 - Annunziata 413</title>
+<!-- Script di Tailwind CSS per gestire gli stili direttamente nell'HTML -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font e Icone -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Regole CSS aggiuntive per le animazioni del menu a tendina del programma -->
+<style>
+        body { background-color: theme('colors.avorio'); }
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Stili per l'animazione a fisarmonica (Accordion) del programma */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, padding 0.3s ease, opacity 0.3s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 3000px; 
+            opacity: 1;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+<!-- Configurazione personalizzata dei colori e dei font (Palette completa) -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#001b3c",
+                      "secondary-fixed-dim": "#e9c176",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#3a5f94",
+                      "surface-variant": "#e4e2de",
+                      "surface-container-highest": "#e4e2de",
+                      "on-surface": "#1b1c1a",
+                      "on-tertiary-fixed-variant": "#4c4733",
+                      "tertiary-fixed-dim": "#cec6ad",
+                      "surface": "#fbf9f5",
+                      "surface-container": "#efeeea",
+                      "on-surface-variant": "#43474f",
+                      "inverse-primary": "#a7c8ff",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "on-secondary-container": "#785a1a",
+                      "on-primary-container": "#799dd6",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#1f477b",
+                      "error": "#ba1a1a",
+                      "primary-container": "#003366",
+                      "outline": "#737780",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#221e0d",
+                      "surface-container-low": "#f5f3ef",
+                      "secondary": "#775a19",
+                      "inverse-on-surface": "#f2f0ed",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#d5e3ff",
+                      "surface-dim": "#dbdad6",
+                      "outline-variant": "#c3c6d1",
+                      "inverse-surface": "#30312e",
+                      "surface-bright": "#fbf9f5",
+                      "surface-container-high": "#eae8e4",
+                      "tertiary-container": "#383321",
+                      "on-background": "#1b1c1a",
+                      "on-tertiary-container": "#a29b83",
+                      "tertiary-fixed": "#ebe2c8",
+                      "background": "#fbf9f5",
+                      "secondary-container": "#fed488",
+                      "on-tertiary-fixed": "#1f1c0b",
+                      "secondary-fixed": "#ffdea5",
+                      "on-secondary-fixed": "#261900",
+                      "primary": "#001e40",
+                      "pergamena": "#F4EBD0",
+                      "avorio": "#FDFBF7",
+                      "oro": "#C5A059"
+              },
+              "spacing": {
+                      "section-gap-desktop": "120px",
+                      "grid-gutter": "24px",
+                      "section-gap-mobile": "64px",
+                      "grid-margin": "24px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "label-caps": ["Inter"],
+                      "headline-sm": ["Playfair Display"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Playfair Display"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-avorio text-on-surface font-body-md antialiased selection:bg-secondary/20 selection:text-primary">
+
+<!-- Barra di Navigazione Superiore (Desktop) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm hidden xl:flex items-center px-4 lg:px-6 py-4 gap-8 lg:gap-12 transition-all duration-300" id="global-nav-desktop">
+    <div class="h-12 flex-shrink-0">
+        <a href="../index.html">
+            <img alt="Annunziata 413 Logo" class="h-full w-auto object-contain" src="../FotoP/Logo.png">
+        </a>
+    </div>
+    
+    <!-- Menu centrato geometricamente -->
+    <ul class="absolute left-1/2 -translate-x-1/2 flex gap-4 lg:gap-8 font-label-caps text-label-caps whitespace-nowrap">
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Preghiere/code.html">Preghiere e Canti</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Carri Mariani/code.html">I Carri</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Il Fercolo/code.html">Il Fercolo</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../I Cerei/code.html">I Cerei</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Confraternita/code.html">Confraternita</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Comitato/code.html">Comitato</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Galleria/code.html">Galleria</a></li>
+        <li><a class="text-secondary border-b-2 border-secondary pb-1 transition-all" href="../Programma/code.html">Programma</a></li>
+    </ul>
+</nav>
+
+<!-- Intestazione Navigazione Mobile -->
+<header class="xl:hidden flex justify-between items-center px-grid-margin py-4 fixed top-0 w-full z-50 bg-surface/90 backdrop-blur border-b border-outline-variant/30 transition-all duration-300" id="global-nav-mobile">
+<div class="h-10">
+    <a href="../index.html">
+        <img alt="Annunziata 413 Logo" class="h-full w-auto object-contain" src="../FotoP/Logo.png">
+    </a>
+</div>
+<button id="mobile-menu-btn" class="material-symbols-outlined text-primary p-2 focus:outline-none">
+    <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+</header>
+
+<!-- Menu a tendina per Smartphone -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-avorio flex-col pt-[100px] px-8 pb-8 hidden xl:hidden overflow-y-auto">
+    <ul class="flex flex-col gap-6 font-headline-sm text-headline-sm text-center">
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Preghiere/code.html">Preghiere e Canti</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Carri Mariani/code.html">I Carri</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Il Fercolo/code.html">Il Fercolo</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../I Cerei/code.html">I Cerei</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Confraternita/code.html">Confraternita</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Comitato/code.html">Comitato</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-all" href="../Galleria/code.html">Galleria</a></li>
+        <li><a class="text-secondary font-bold transition-all" href="../Programma/code.html">Programma</a></li>
+    </ul>
+</div>
+
+<!-- Contenitore Principale -->
+<main class="pt-[100px] pb-section-gap-desktop md:pt-[140px]">
+<!-- Immagine di sfondo in filigrana -->
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl opacity-[0.03] pointer-events-none z-0"><img src="../FotoP/Logo.png" alt="" class="w-full h-auto object-contain"></div>
+
+<!-- Titolo della pagina -->
+<section class="px-grid-margin max-w-[1200px] mx-auto mb-16 md:mb-24 relative z-10">
+<div class="flex flex-col items-center text-center">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-4">Mese Mariano - Settembre 2026</span>
+<div class="flex justify-center mb-4 opacity-80"><img src="../FotoP/Logo.png" alt="Ornament" class="h-16 w-auto object-contain" style="filter: sepia(1) saturate(5) hue-rotate(10deg);"></div><h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Programma Festeggiamenti</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Il calendario solenne delle celebrazioni per la 413° edizione della festa di Maria SS. Annunziata. Un percorso di fede, tradizione e comunità.
+                </p>
+</div>
+</section>
+
+<!-- Griglia del Programma -->
+<section class="px-grid-margin max-w-[800px] mx-auto relative space-y-4 z-10">
+
+<!-- 1 SETTEMBRE -->
+<div class="accordion-item bg-surface border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex flex-col items-center justify-center border border-secondary/20 flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">01</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">MARTEDÌ 1 SETTEMBRE</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-outline-variant/20 bg-surface-container-lowest"><ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1">Al mattino</span><span class="font-body-md text-body-md text-on-surface-variant">Al mattino, il tradizionale <strong>sparo di ventun colpi a cannone</strong> e il suono festoso delle campane di tutte le chiese cittadine, annunceranno alla cittadinanza l'inizio dei <strong>festeggiamenti patronali</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Basilica</strong>, celebrazione della <strong>S. Messa</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 19:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Santuario</strong>, celebrazione della <strong>S. Messa</strong> in onore della <strong>Madonna delle Lacrime</strong> presieduta dal <strong>Can. Antonino Carbonaro</strong>, Rettore-Parroco, nel ricordo del 73° anniversario della lacrimazione della Vergine Maria a <strong>Siracusa</strong>.</span></li>
+</ul></div>
+</div>
+
+<!-- 5 SETTEMBRE -->
+<div class="accordion-item bg-surface border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex flex-col items-center justify-center border border-secondary/20 flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">05</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">SABATO 5 SETTEMBRE</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-outline-variant/20 bg-surface-container-lowest">
+<div class="mb-4 p-3 bg-secondary/10 rounded-md border border-secondary/20"><p class="font-body-md text-sm text-on-surface-variant"><strong>Primo Sabato del mese</strong></p></div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Basilica</strong>, celebrazione della <strong>S. Messa</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 18:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Dalla Basilica</strong>, inizio del <strong>pellegrinaggio</strong> verso il <strong>Santuario</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 19:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Santuario</strong>, celebrazione della <strong>S. Messa</strong>.</span></li>
+</ul></div>
+</div>
+
+<!-- 6 SETTEMBRE -->
+<div class="accordion-item bg-surface border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex flex-col items-center justify-center border border-secondary/20 flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">06</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">DOMENICA 6 SETTEMBRE – <strong>XXIII del Tempo Ordinario</strong></h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-outline-variant/20 bg-surface-container-lowest">
+<div class="mb-4 p-3 bg-secondary/10 rounded-md border border-secondary/20"><p class="font-body-md text-sm text-on-surface-variant"><strong>Apertura delle celebrazioni patronali</strong></p></div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Ore 8:30</strong> ; <strong>12:00</strong> ; <strong>19:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Basilica</strong>, celebrazione di <strong>SS. Messe</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Ore 10:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Santuario</strong>, celebrazione della <strong>S. Messa</strong> presieduta dal Rev.do Rettore-Parroco con la partecipazione dei giovani portatori delle <strong>Candelore</strong> che rinnoveranno le promesse battesimali.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Ore 16:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Festosa uscita delle <strong>Candelore</strong> dalla <strong>“casa ‘a Vara”</strong> e arrivo <strong>sul sagrato del Santuario</strong> dove si svolgerà il <strong>rito di benedizione</strong> dei portatori. I <strong>Cerei</strong> inizieranno il giro per le vie: <strong>Maria SS. Annunziata</strong>, <strong>F. Faro</strong>, <strong>Fichera</strong>, <strong>Regalotto</strong>, <strong>Distefano</strong>, <strong>Pianistrello</strong>, <strong>Narduzzo</strong>, <strong>F. Faro</strong>, <strong>San Biagio</strong>, <strong>San Vito</strong> e <strong>Piazza Don Diego Pappalardo</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Ore 21:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Festoso ingresso delle <strong>Candelore</strong> <strong>in Basilica</strong>.</span></li>
+</ul>
+<div class="mt-4 p-3 bg-surface-variant/30 rounded-md border border-outline-variant/20"><p class="font-body-md text-sm text-on-surface-variant italic">(In <strong>Santuario</strong> non verrà celebrata la S. Messa delle <strong>ore 8:00</strong> né verrà celebrata la S. Messa delle <strong>ore 10:30</strong> <strong>in Basilica</strong>)</p></div>
+</div>
+</div>
+
+<!-- 7-10 SETTEMBRE -->
+<div class="accordion-item bg-surface border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex flex-col items-center justify-center border border-secondary/20 flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">7-10</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">DA LUNEDÌ 7 A GIOVEDÌ 10 SETTEMBRE</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-outline-variant/20 bg-surface-container-lowest">
+<div class="mb-4 p-3 bg-secondary/10 rounded-md border border-secondary/20"><p class="font-body-md text-sm text-on-surface-variant">La comunità si riunisce <strong>in Santuario</strong> con Maria nell'ascolto della Parola di Dio.</p></div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 18:15</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Recita del <strong>S. Rosario</strong> e della tradizionale <strong>coroncina di lode</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 19:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Celebrazione della <strong>S. Messa</strong> presieduta dal Rev.do Rettore-Parroco. L'omelia sarà tenuta dal <strong>Rev. Diacono don Angelo Butera</strong>, collaboratore pastorale della <strong>Basilica</strong>.<br><br>Animeranno la liturgia:<br><strong>Lunedì 7</strong> la <strong>Famiglia Salesiana</strong><br><strong>Martedì 8</strong> la Comunità Parrocchiale <strong>“Maria Immacolata”</strong><br><strong>Mercoledì 9</strong> la Comunità Parrocchiale <strong>“S. Antonio Abate”</strong><br><strong>Giovedì 10</strong> la Comunità Parrocchiale <strong>“S. Caterina A. V. e M.”</strong></span></li>
+</ul></div>
+</div>
+
+<!-- 11 SETTEMBRE (Offerta Cera) -->
+<div class="accordion-item bg-surface border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex flex-col items-center justify-center border border-secondary/20 flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">11</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">VENERDÌ 11 SETTEMBRE</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-outline-variant/20 bg-surface-container-lowest">
+<div class="mb-4 p-3 bg-secondary/10 rounded-md border border-secondary/20"><p class="font-body-md text-sm text-on-surface-variant"><strong>Giornata dell'offerta della cera</strong></p></div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Scampanio solenne</strong> e <strong>sparo di colpi a cannone</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Basilica</strong>, celebrazione della <strong>S. Messa</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 16:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Festosa uscita dei <strong>Cerei</strong> dalla <strong>Basilica</strong> e giro per le vie: <strong>Amm. Toscano</strong>, <strong>Piazza Del Popolo</strong>, <strong>R. Toscano</strong>, <strong>Corso Ara di Giove</strong>, <strong>Rua Sant'Antonio</strong>, <strong>Sarafia</strong>, <strong>Dusmet</strong>, <strong>Don Piazza</strong>, <strong>Rua Sant'Antonio</strong> e <strong>Piazza Sant'Antonio</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 19:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Nella chiesa parrocchiale “S. Antonio Abate”</strong>, celebrazione della <strong>S. Messa solenne</strong> presieduta dal <strong>Rev.do Mons. Carmelo Asero</strong>, Parroco della Basilica Collegiata di Catania e Vicario Giudiziale. Al termine, <strong>solenne processione</strong> per l'offerta della cera alla Vergine Annunziata. Il corteo, preceduto dalle <strong>Candelore</strong>, procederà lungo <strong>Corso Ara di Giove</strong>, <strong>Piazza Don Diego Pappalardo</strong>, <strong>via Delle Rimembranze</strong> e <strong>via Maria SS. Annunziata</strong>. All'arrivo in <strong>Santuario</strong>, breve momento di preghiera e benedizione conclusiva.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 22:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Piazza Don Diego Pappalardo</strong>, <strong>momento di festa</strong> dei giovani dei Partiti <strong>“Piazza”</strong> e <strong>“S. Antonio”</strong>.</span></li>
+</ul></div>
+</div>
+
+<!-- 12 SETTEMBRE (Vigilia) - In evidenza -->
+<div class="accordion-item bg-surface-container-low border-2 border-secondary/50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0 bg-primary px-4 py-2 rounded text-center border border-secondary/30">
+<span class="block font-label-caps text-label-caps text-secondary-fixed uppercase mb-0.5">Vigilia</span>
+<span class="block font-headline-md text-headline-md text-on-primary leading-none">12</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">SABATO 12 SETTEMBRE – <strong>Memoria del SS. Nome di Maria</strong></h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-secondary/20 bg-surface">
+<div class="mb-4 p-3 bg-secondary/10 rounded-md border border-secondary/20"><p class="font-body-md text-sm text-on-surface-variant"><strong>Vigilia della Festa</strong></p></div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Festosa uscita dei <strong>Cerei</strong> dalla <strong>Basilica</strong> e giro per le vie: <strong>Roma</strong>, <strong>Dott. Consoli</strong>, <strong>Roma</strong>, <strong>Laudani</strong>, <strong>E. Patti</strong>, <strong>G. La Pira</strong>, <strong>La Rosa</strong>, <strong>Corso Ara di Giove</strong>, <strong>Piazza Don Bosco</strong> e <strong>Piazza Don Diego Pappalardo</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Basilica</strong>, celebrazione della <strong>S. Messa</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 13:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Ingresso delle <strong>Candelore</strong> <strong>in Basilica</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 18:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Piazza Don Diego Pappalardo</strong>, ingresso dei <strong>Complessi Bandistici</strong>: <strong>“Città di Pedara”</strong>, <strong>“R. Lampuri”</strong> di Castiglione di Sicilia e <strong>“Orchestra di fiati G. Risi”</strong> di Acireale.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 21:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Piazza Don Diego Pappalardo</strong>, esibizione dei <strong>Carri Mariani</strong> curati dalle maestranze giovanili dei Partiti <strong>“Piazza”</strong> e <strong>“S. Antonio”</strong>. <strong>Spettacoli pirotecnici</strong> a cura di <strong>“Zio Piro Fireworks”</strong> e dei giovani del Partito “S. Antonio”.</span></li>
+</ul></div>
+</div>
+
+<!-- 13 SETTEMBRE (Festa) - Massimo risalto in BLU -->
+<div class="accordion-item bg-primary border-2 border-secondary/50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow relative active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-primary-container transition-colors relative z-10" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0 flex flex-col items-center justify-center md:pr-4">
+<span class="font-display-lg text-display-lg text-secondary leading-none">13</span>
+<span class="font-label-caps text-label-caps text-on-primary uppercase mt-1">Settembre</span>
+</div>
+<div>
+<div class="inline-block px-2 py-0.5 bg-secondary/20 text-secondary-fixed-dim font-label-caps text-label-caps rounded mb-1 border border-secondary/30">SOLENNITÀ DELLA MADONNA</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary">DOMENICA 13 SETTEMBRE – <strong>XXIV del Tempo Ordinario</strong></h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-secondary/30 bg-primary/95 relative z-10">
+<div class="mb-4 p-3 bg-secondary/20 rounded-md border border-secondary/30">
+    <p class="font-body-md text-sm text-on-primary"><strong>“ ‘a Duminica da festa”</strong></p>
+    <p class="font-body-md text-sm text-on-primary/80 italic mt-1">(I <strong>Cerei</strong> prenderanno parte alle processioni del venerato simulacro dell'Annunziata)</p>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-20 flex-shrink-0 mt-1"><strong>Ore 7:00</strong></span><span class="font-body-md text-body-md text-on-primary/90"><strong>Scampanio solenne</strong> e <strong>sparo di colpi a cannone</strong>. Ingresso del <strong>Complesso Bandistico “G. Verdi”</strong> Città di Troina.<br><br><strong>Dalla Basilica</strong>, partenza del <strong>pellegrinaggio</strong> della Confraternita Circolo Cattolico “Maria SS. Annunziata” verso il <strong>Santuario</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-20 flex-shrink-0 mt-1"><strong>Ore 7:30</strong></span><span class="font-body-md text-body-md text-on-primary/90"><strong>In Santuario</strong>, celebrazione della <strong>S. Messa solenne</strong> e <strong>svelata del venerato simulacro</strong> della Vergine Annunziata.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-20 flex-shrink-0 mt-1"><strong>Ore 9:00</strong></span><span class="font-body-md text-body-md text-on-primary/90"><strong>Solenne uscita del simulacro</strong> in processione lungo le vie: <strong>Maria SS. Annunziata</strong> (omaggio dei <strong>Cerei</strong>), <strong>F. Faro</strong>, <strong>San Biagio</strong>, <strong>F. Faro</strong>, <strong>P. Vinci</strong>, <strong>Leonardi</strong>, <strong>Corso Ara di Giove</strong>, <strong>Altavilla</strong>, <strong>Sac. A. Barbagallo</strong>, <strong>Altavilla</strong>, <strong>G. Marconi</strong>, <strong>Grazia</strong> ed <strong>Etnea</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-28 flex-shrink-0 mt-1"><strong>Dalle ore 9:00 alle ore 13:00</strong></span><span class="font-body-md text-body-md text-on-primary/90"><strong>Raccolta di sangue</strong> a cura della “Fratres” in <strong>via F. Faro</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-20 flex-shrink-0 mt-1"><strong>Ore 12:00</strong></span><span class="font-body-md text-body-md text-on-primary/90">Trionfale entrata del fercolo in <strong>Piazza Don Diego Pappalardo</strong> e ingresso in <strong>Basilica</strong> per la <strong>S. Messa</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-20 flex-shrink-0 mt-1"><strong>Ore 17:00</strong></span><span class="font-body-md text-body-md text-on-primary/90">Ingresso del <strong>Complesso Bandistico “Città di Trecastagni”</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-20 flex-shrink-0 mt-1"><strong>Ore 17:30</strong></span><span class="font-body-md text-body-md text-on-primary/90"><strong>In Basilica</strong>, celebrazione della <strong>S. Messa</strong>. Al termine, <strong>uscita dei Cerei</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-20 flex-shrink-0 mt-1"><strong>Ore 19:00</strong></span><span class="font-body-md text-body-md text-on-primary/90"><strong>Trionfale uscita del venerato simulacro</strong> sul <strong>sagrato della Basilica</strong>. La solenne processione attraverserà: <strong>Corso Ara di Giove</strong>, <strong>F. Faro</strong>, <strong>P. Vinci</strong>, <strong>Leonardi</strong>, <strong>Roma</strong>, <strong>Laudani</strong>, <strong>Piazza Sant'Antonio</strong>, <strong>Corso Ara di Giove</strong>, <strong>L. Pirandello</strong>, <strong>G. Verga</strong>, <strong>Collegio</strong>, <strong>Rua Sant'Antonio</strong>, <strong>Delle Ginestre</strong> ed esibizione del <strong>Carro Mariano del Partito “S. Antonio”</strong>. Omaggio floreale dinanzi al <strong>Municipio</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-20 flex-shrink-0 mt-1"><strong>Ore 20:30</strong></span><span class="font-body-md text-body-md text-on-primary/90"><strong>In Piazza Don Diego Pappalardo</strong>, <strong>Concerto Sinfonico</strong> del Gran Complesso Bandistico “G. Verdi”.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-28 flex-shrink-0 mt-1"><strong>Ore 21:30 circa</strong></span><span class="font-body-md text-body-md text-on-primary/90"><strong>Nel piazzale di Via Rua Sant’Antonio</strong>, esibizione del <strong>Carro Mariano del Partito “S. Antonio”</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary-fixed-dim w-28 flex-shrink-0 mt-1"><strong>Ore 23:30 circa</strong></span><span class="font-body-md text-body-md text-on-primary/90">Festoso ingresso del fercolo in <strong>Piazza Don Diego Pappalardo</strong>, esibizione del <strong>Carro Mariano del Partito “Piazza”</strong>. Al termine, ingresso in <strong>Basilica</strong>.</span></li>
+</ul></div>
+</div>
+
+<!-- 14 SETTEMBRE -->
+<div class="accordion-item bg-surface-container-low border border-secondary/50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex flex-col items-center justify-center border border-secondary/20 flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">14</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">LUNEDÌ 14 SETTEMBRE – <strong>Festa dell’Esaltazione della S. Croce</strong></h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-outline-variant/20 bg-surface-container-lowest">
+<div class="mb-4 p-3 bg-secondary/10 rounded-md border border-secondary/20"><p class="font-body-md text-sm text-on-surface-variant"><strong>“ ‘a festa de’ paisani”</strong></p></div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Scampanio solenne</strong> e <strong>sparo di colpi a cannone</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Basilica</strong>, celebrazione della <strong>S. Messa</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Dalle ore 9:00 alle ore 13:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Raccolta di sangue</strong> in <strong>via F. Faro</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 10:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Celebrazione della <strong>S. Messa</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 17:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Ingresso del <strong>Corpo Bandistico “Città di Pedara”</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 17:15</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Sul sagrato della Basilica</strong>, accoglienza di <strong>Sua Ecc.za Rev.ma Mons. Giuseppe Marciante</strong>, Vescovo di Cefalù.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 17:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Solenne Celebrazione Eucaristica Pontificale</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 19:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Festosa uscita del venerato simulacro</strong> sul <strong>sagrato della Basilica</strong>. Processione per le vie: <strong>Amm. Toscano</strong>, <strong>Pappalardo</strong>, <strong>E. Patti</strong>, <strong>Della Repubblica</strong>, <strong>C. Battisti</strong>, <strong>Spadazzino</strong>, <strong>E. Patti</strong>, <strong>Cap. Tomaselli</strong> e <strong>Piazza Don Diego Pappalardo</strong>. <strong>Spettacolo piromusicale</strong> e ingresso in <strong>Basilica</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 20:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>In Piazza Don Diego Pappalardo</strong>, <strong>spettacolo folcloristico</strong> “La Vita del Siciliano”.</span></li>
+</ul></div>
+</div>
+
+<!-- 15-18 SETTEMBRE RAGGRUPPATI E DETTAGLIATI -->
+<div class="accordion-item bg-surface border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex flex-col items-center justify-center border border-secondary/20 flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">15-18</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">DA MARTEDÌ 15 A VENERDÌ 18 SETTEMBRE</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-outline-variant/20 bg-surface-container-lowest">
+<div class="mb-6 p-4 bg-secondary/10 rounded-md border border-secondary/20">
+    <p class="font-body-md text-sm text-on-surface-variant mb-2">Il simulacro resterà <strong>esposto alla venerazione</strong> nella <strong>Basilica</strong> aperta <strong>dalle ore 7:30 alle ore 12:00</strong> e <strong>dalle ore 17:00 alle ore 20:30</strong>.</p>
+    <p class="font-body-md text-sm text-on-surface-variant">Ogni giorno: <strong>Ore 8:15</strong> <strong>Lodi mattutine</strong>, <strong>Ore 8:30</strong> <strong>S. Messa</strong>, <strong>Ore 18:30</strong> <strong>S. Rosario</strong>. Alle <strong>Ore 19:00</strong> <strong>S. Messa</strong> tematica come segue:</p>
+</div>
+<ul class="space-y-6">
+    <li class="flex flex-col gap-1 border-l-2 border-secondary pl-4">
+        <span class="font-headline-sm text-primary text-lg">Martedì 15 - <strong>Giornata dei bambini</strong></span>
+        <span class="font-body-md text-on-surface-variant">Presiederà la S. Messa il <strong>Rev.do Don Ugo Rapicavoli</strong>, Parroco in “Maria Immacolata” a Pedara.</span>
+    </li>
+    <li class="flex flex-col gap-1 border-l-2 border-secondary pl-4">
+        <span class="font-headline-sm text-primary text-lg">Mercoledì 16 – <strong>Giornata delle famiglie</strong></span>
+        <span class="font-body-md text-on-surface-variant">Presiederà la S. Messa il <strong>Rev.do Don Vincenzo Lo Sardo, SdB</strong>, Parroco in “S. Antonio Abate” a Pedara.</span>
+    </li>
+    <li class="flex flex-col gap-1 border-l-2 border-secondary pl-4">
+        <span class="font-headline-sm text-primary text-lg">Giovedì 17 – <strong>Giornata degli infermi</strong></span>
+        <span class="font-body-md text-on-surface-variant mb-1">Presiederà la S. Messa il <strong>Rev.do Don Domenico Rapisarda</strong>, Parroco in “S. Maria delle Grazie” a Piano di Tremestieri Etneo. Al termine, <strong>esposizione del SS. Sacramento</strong>, breve processione sul <strong>sagrato della Basilica</strong> e <strong>Benedizione Eucaristica conclusiva</strong>.</span>
+        <span class="font-body-md text-on-surface-variant"><strong>Ore 20:30</strong> – <strong>In Basilica</strong>, <strong>Oratorio Sacro</strong> “Il Canto di Mosè” a cura di Jebel Ensemble.</span>
+    </li>
+    <li class="flex flex-col gap-1 border-l-2 border-secondary pl-4">
+        <span class="font-headline-sm text-primary text-lg">Venerdì 18 – <strong>Giornata dei giovani</strong></span>
+        <span class="font-body-md text-on-surface-variant mb-1">Presiederà la S. Messa il <strong>Rev.do Don Francesco Nicolosi</strong>, Parroco in “S. Cuore di Gesù e S. Margherita M. Alacoque” a Piano Tavola e in “S. Maria delle Grazie” a Valcorrente. Parteciperanno i portatori delle <strong>Candelore</strong> e i giovani dei Partiti <strong>“Piazza”</strong> e <strong>“S. Antonio”</strong>.</span>
+        <span class="font-body-md text-on-surface-variant"><strong>Ore 20:30</strong> – <strong>In Piazza Don Diego Pappalardo</strong>, commedia teatrale <strong>“Caviale e Lenticchie”</strong>.</span>
+    </li>
+</ul>
+</div>
+</div>
+
+<!-- 19 SETTEMBRE -->
+<div class="accordion-item bg-surface border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container-low transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container flex flex-col items-center justify-center border border-secondary/20 flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">19</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">SABATO 19 SETTEMBRE – <strong>Conclusione dell’Ottavario</strong></h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-outline-variant/20 bg-surface-container-lowest">
+<div class="mb-4 p-3 bg-secondary/10 rounded-md border border-secondary/20"><p class="font-body-md text-sm text-on-surface-variant italic">(I <strong>Cerei</strong> prenderanno parte alle processioni)</p></div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:15</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Lodi mattutine</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 8:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Celebrazione della <strong>S. Messa</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 17:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Ingresso del <strong>Corpo Bandistico “Città di Pedara”</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 18:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Solenne Celebrazione Eucaristica</strong> presieduta dal <strong>Rev.do Parroco</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-20 flex-shrink-0 mt-1"><strong>Ore 20:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Festosa uscita del venerato simulacro</strong> della Vergine Annunziata sul <strong>sagrato della Basilica</strong> e devoto <strong>omaggio ai Caduti</strong> di tutte le guerre. I <strong>Cerei</strong> renderanno omaggio alla Madonna, quindi, dall’edicola votiva di <strong>Piazza Don Diego Pappalardo</strong>, angolo <strong>via Leonardi</strong>, il popolo pedarese accompagnerà la sua Patrona al <strong>Santuario</strong> recitando il <strong>S. Rosario</strong> lungo <strong>via Delle Rimembranze</strong> e <strong>via Maria SS. Annunziata</strong>. Ingresso in <strong>Santuario</strong> e reposizione del venerato simulacro nella <strong>cameretta</strong>.</span></li>
+</ul></div>
+</div>
+
+<!-- 20 SETTEMBRE (Ottava) -->
+<div class="accordion-item bg-surface-container-low border border-secondary rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow active">
+<button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none focus:bg-surface-container transition-colors" onclick="this.parentElement.classList.toggle('active')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface border-2 border-secondary/50 flex flex-col items-center justify-center flex-shrink-0">
+<span class="font-label-caps text-label-caps text-secondary leading-none">Set</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-none mt-1">20</span>
+</div>
+<div>
+<div class="inline-block px-2 py-0.5 bg-secondary/10 text-secondary font-label-caps text-label-caps rounded mb-1">OTTAVA</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">DOMENICA 20 SETTEMBRE - <strong>XXV del Tempo Ordinario</strong></h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 border-t border-secondary/20 bg-surface">
+<div class="mb-4 p-3 bg-secondary/10 rounded-md border border-secondary/20"><p class="font-body-md text-sm text-on-surface-variant"><strong>Ottava dei festeggiamenti e chiusura</strong></p></div>    
+<ul class="space-y-4">
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Dalle ore 7:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">A partire <strong>dalle ore 7:00</strong>, il simulacro sarà <strong>esposto alla venerazione</strong> al <strong>Santuario</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Ore 8:00, 10:30, 12:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Celebrazioni delle <strong>SS. Messe</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Ore 17:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Ingresso del <strong>Corpo Bandistico “Città di Pedara”</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Ore 18:30</strong></span><span class="font-body-md text-body-md text-on-surface-variant">Recita del <strong>S. Rosario</strong>.</span></li>
+<li class="flex items-start gap-3"><span class="font-label-caps text-label-caps text-secondary w-28 flex-shrink-0 mt-1"><strong>Ore 19:00</strong></span><span class="font-body-md text-body-md text-on-surface-variant"><strong>Solenne Celebrazione Eucaristica</strong> di chiusura. Al termine la venerata effigie sarà riposta e <strong>velata</strong>.</span></li>
+</ul></div>
+</div>
+
+<!-- Divisore finale a fondo pagina -->
+<div class="flex items-center justify-center py-12 opacity-40"><div class="h-px bg-secondary/30 w-24"></div><img src="../FotoP/Logo.png" alt="Separator" class="h-8 mx-4 object-contain" style="filter: sepia(1) saturate(3); opacity: 0.6;"><div class="h-px bg-secondary/30 w-24"></div></div></section>
+</main>
+
+<!-- Piè di pagina (Footer) -->
+<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md w-full py-section-gap-desktop px-grid-margin flex flex-col md:flex-row justify-between gap-grid-gutter border-secondary/20 transition-all duration-300">
+<div class="flex flex-col gap-4">
+<!-- Link sul Logo nel Footer -->
+<a href="../index.html">
+    <img alt="Annunziata 413 Logo" class="h-16 w-auto object-contain mb-2" src="../FotoP/Logo.png">
+</a>
+<p class="text-on-primary/80 dark:text-on-surface/80 text-sm">
+                Festa Maria SS. Annunziata - 413° Edizione
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-12 mt-8 md:mt-0">
+<a class="text-on-primary/80 dark:text-on-surface/80 hover:text-secondary-fixed-dim transition-colors" href="../Contatti/code.html">Contatti</a>
+<a class="text-on-primary/80 dark:text-on-surface/80 hover:text-secondary-fixed-dim transition-colors" href="../Ringraziamenti/code.html">Ringraziamenti</a>
+</div>
+</footer>
+
+<!-- Script Javascript -->
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+        btn.innerText = menu.classList.contains('hidden') ? 'menu' : 'close';
+    });
+
+    const navDesktop = document.getElementById('global-nav-desktop');
+    const navMobile = document.getElementById('global-nav-mobile');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            if(navDesktop) {
+                navDesktop.classList.add('shadow-md', 'bg-surface/95');
+                navDesktop.classList.remove('bg-surface/80');
+            }
+            if(navMobile) {
+                navMobile.classList.add('shadow-md', 'bg-surface/95');
+                navMobile.classList.remove('bg-surface/80');
+            }
+        } else {
+            if(navDesktop) {
+                navDesktop.classList.remove('shadow-md', 'bg-surface/95');
+                navDesktop.classList.add('bg-surface/80');
+            }
+            if(navMobile) {
+                navMobile.classList.remove('shadow-md', 'bg-surface/95');
+                navMobile.classList.add('bg-surface/80');
+            }
+        }
+    });
+</script>
+</body></html>
